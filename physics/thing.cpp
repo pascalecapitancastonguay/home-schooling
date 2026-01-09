@@ -3,16 +3,21 @@
 using namespace std;
 
 int main(){
-int n;cin>>n;
-   long long num_moves=0;
+    int n;
+    cin >> n;
+    long long num_moves = 0;
     vector <long long> v(n);
-cin>>v[0];
-for(int i=1;i<n;i++){
-cin>>v[i];
-if(v[ i]<v[i-1]){num_moves += v[i-1]- v[i];v [i]=v[i-1];}
+    cin >> v[0];
+    for(int i=1; i<n; i++) {
+        cin>>v[i];
+        if(v[i] < v[i-1]){
+            num_moves += v[i-1]- v[i];
+            v[i] = v[i-1];
+        }
+    }
+    cout << num_moves;
 }
-cout<<num_moves;
-}
+
 
 
 
